@@ -79,11 +79,26 @@
                         💼 LinkedIn Profile
                     </a>
 
-                    <!-- Resume Button -->
-                    <a href="/path/to/your/resume.pdf" download
-                       class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition duration-300 inline-block text-center">
-                        📄 Download Resume
-                    </a>
+                   <!-- Resume Button -->
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Resume Button</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+    <!-- Resume Button -->
+    <a href="Image/Ashish Pandey Resume.pdf" download
+       class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition duration-300 inline-block text-center">
+        📄 Download Resume
+    </a>
+
+</body>
+</html>
+
                 </div>
             </div>
             
@@ -268,19 +283,40 @@
                         <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Innovation</span>
                     </div>
                 </div>
-                <!-- Progress box lowered using mt-6 -->
-                <div class="bg-gradient-to-r from-orange-500 to-amber-500 p-6 rounded-xl text-white text-center mt-6">
-                    <div class="text-5xl mb-4">📊</div>
-                    <h5 class="text-lg font-semibold mb-2">Progress Status</h5>
-                    <div class="bg-white bg-opacity-20 rounded-full h-3 mb-2">
-                        <div class="bg-white h-3 rounded-full" style="width: 65%"></div>
-                    </div>
-                    <p class="text-sm">50% Complete</p>
+               <!-- Progress box -->
+<div class="bg-gradient-to-r from-orange-500 to-amber-500 p-6 rounded-xl text-white text-center mt-6 w-80">
+    <div class="text-5xl mb-4">📊</div>
+    <h5 class="text-lg font-semibold mb-2">Progress Status</h5>
+    <div class="bg-white bg-opacity-20 rounded-full h-3 mb-2">
+        <div id="progress-bar" class="bg-white h-3 rounded-full" style="width: 0%; transition: width 0.5s ease-in-out;"></div>
+    </div>
+    <p id="progress -text" class="text-sm">0% Complete</p>
+</div>
+
+<script>
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+
+    // Function to update progress
+    function updateProgress(percent) {
+        if (percent < 0) percent = 0;
+        if (percent > 100) percent = 100;
+        progressBar.style.width = percent + '%';
+        progressText.innerText = percent + '% Complete';
+    }
+
+    // Example usage: set your desired percentage here
+    let progressPercent = 40; // change this to any value you want
+    updateProgress(progressPercent);
+</script>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 
 
 
@@ -316,7 +352,7 @@
                 <!-- Add more course cards as needed -->
             </div>
         </div>
-    </section> -->
+    </section>
 
    <!-- Certifications Section -->
 <section id="certifications" class="py-20 bg-white section-fade">
@@ -382,7 +418,7 @@
 
             <!-- Certificate 6 -->
             <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl border border-yellow-100 card-hover">
-                <div class="text-3xl mb-4">🧪</div>
+                <div class="text-3xl mb-4">🏅</div>
                 <h4 class="text-lg font-semibold mb-2 text-gray-800">NumPy, SciPy, Matplotlib & Pandas A-Z: Machine Learning
 </h4>
                 <p class="text-gray-600 text-sm mb-3">Udemy</p>
@@ -402,11 +438,20 @@
                     View Certificate
                 </a>
             </div>
+            <!-- Certificate 8 -->
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl border border-indigo-100 card-hover">
+                <div class="text-3xl mb-4">🏅</div>
+                <h4 class="text-lg font-semibold mb-2 text-gray-800">Summer Analytics: Data Science & Machine Learning</h4>
+                <p class="text-gray-600 text-sm mb-3">IIT Guwahati</p>
+                <p class="text-gray-500 text-sm mb-4">Completed “Summer Analytics: Data Science & Machine Learning” (IIT Guwahati, 6 weeks), gaining hands-on experience in Python, data analysis, visualization, machine learning.</p>
+                <a href="Image/Summer Analytics.png" target="_blank" class="inline-block bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-indigo-700 transition duration-300">
+                    View Certificate
+                </a>
+            </div>
 
         </div>
     </div>
 </section>
-
 
     <!-- Work Experience Section
     <section id="experience" class="py-20 bg-white section-fade">
@@ -523,7 +568,7 @@
                     </div>
                 </div>
 
-                <!-- Bioinformatics Skills -->
+              <!-- Bioinformatics Skills -->
 <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
     <div class="text-center mb-6">
         <div class="text-5xl mb-4">🧬</div>
@@ -548,7 +593,7 @@
         </div>
         <div>
             <div class="flex justify-between mb-2">
-                <span class="text-gray-700 font-bold">Drug Design</span>
+                <span class="text-gray-700 font-bold">Genome Browsing</span>
             </div>
             <div class="bg-gray-200 rounded-full h-2">
                 <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full w-full"></div>
@@ -588,7 +633,7 @@
         </div>
     </section>
 
-    <!-- Extracurricular Section -->
+  <!-- Extracurricular Section -->
     <section id="extracurricular" class="py-20 bg-gray-50 section-fade">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Extracurricular Activities</h2>
@@ -601,13 +646,13 @@
                 
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
                     <div class="text-4xl mb-4 text-center">🎭</div>
-                    <h4 class="text-lg font-semibold mb-2 text-gray-800 text-center">Core Team Member, Events Team, RIC'25, IIT Guwahati</h4>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800 text-center">Event Management Team Member, RIC'25, IIT Guwahati</h4>
                     <p class="text-gray-600 text-sm text-center">Assisted in planning and executing events, coordinating logistics, and ensuring smooth event management.</p>
                 </div>
                 
                 <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
                     <div class="text-4xl mb-4 text-center">🏅</div>
-                    <h4 class="text-lg font-semibold mb-2 text-gray-800 text-center">Volunteer, IISF’24, IIT Guwahati</h4>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800 text-center">Coordinator, India International Science Festival 2024, IIT Guwahati</h4>
                     <p class="text-gray-600 text-sm text-center">Contributed to organizing and managing activities, supporting participants, and ensuring smooth execution of the event.</p>
                 </div>
             </div>
